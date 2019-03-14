@@ -9,7 +9,7 @@ public class Runner {
         Greeter greeter = ServiceLoader.load(Greeter.class).findFirst().orElseThrow(() -> new RuntimeException("No Greeter found!"));
         System.out.println(greeter.hello());
 
-        var resource = Runner.class.getResourceAsStream("/resourcetest.txt");
+        var resource = Runner.class.getResourceAsStream("/resourcepackage/resourcetest.txt");
         if(resource == null) {
             throw new RuntimeException("Couldn't load resource");
         }

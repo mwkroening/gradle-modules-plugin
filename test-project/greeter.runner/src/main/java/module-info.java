@@ -4,4 +4,6 @@ module greeter.runner {
     requires greeter.api;
 
     uses Greeter;
+
+    opens resourcepackage;
 }
